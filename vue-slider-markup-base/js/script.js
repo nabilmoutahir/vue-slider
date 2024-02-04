@@ -35,13 +35,34 @@ const { createApp } = Vue
             }
         ]
       }
+    },
+
+
+    methods: {
+
+        // metodo prossima slide
+        nextSlide () {
+            if(this.activeItems >= this.slides.length - 1){
+                this.activeItems = 0;
+            } else {
+                this.activeItems++;
+            }
+        },
+
+        // metodo slide precedente
+        prevSlide () {
+            if(this.activeItems <= 0){
+                this.activeItems = this.slides.length - 1;
+            } else {
+                this.activeItems--;
+            }
+        },
+
     }
 
 
-    // methods() {
 
 
-    // }
   }).mount('#app')
 
 
