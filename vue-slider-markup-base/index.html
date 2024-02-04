@@ -19,7 +19,7 @@
                 <!-- IMG PRINCIPALE -->
                 <div class="item">
 
-                    <img  :src="slides[activeItems].image" alt="Spiderman" />
+                    <img :src="slides[activeItems].image" :alt="slides[activeItems].title" />
 
                     <div class="text">
 
@@ -42,10 +42,10 @@
                     <div @click="nextSlide()" class="next"></div>
 
                     <!-- THUMBNAILS -->
-                    <div class="thumb active">
-                        <img src="img/01.webp" alt="Svezia" />
+                    <div v-for="(slide, index) in slides" :class="(index == activeItems) ? 'active' : ''" class="thumb">
+                        <img :src="slide.image" :alt="slide.title" />
                     </div>
-                    <div class="thumb">
+                    <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
                     </div>
                     <div class="thumb">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="thumb">
                         <img src="img/05.webp" alt="Avengers" />
-                    </div>
+                    </div> -->
                 </div>
 
             </div>

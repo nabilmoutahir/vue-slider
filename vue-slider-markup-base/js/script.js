@@ -5,8 +5,10 @@ const { createApp } = Vue
     data() {
       return {
 
+        // index var
         activeItems: 0,
 
+        // array of obj
         slides: [
             {
                 image: 'img/01.webp',
@@ -38,6 +40,7 @@ const { createApp } = Vue
     },
 
 
+    // methods
     methods: {
 
         // metodo prossima slide
@@ -60,10 +63,4 @@ const { createApp } = Vue
 
     }
 
-
-
-
   }).mount('#app')
-
-
-//   v-for="(slide, index) in slides"
